@@ -23,7 +23,7 @@ def get_data(full_url):
         res_string = res_to_str(data)
         print(res_string)
 
-api_options = [ "Get a random quote.", "Get random quote by anime name.", "Get random quote character name.", "Get 10 random quotes", "Get 10 quotes by anime name.", "Get 10 quotes by character name." ]
+api_options = [ "Get a random quote.", "Get random quote by anime name.", "Get 10 random quotes", "Get 10 quotes by anime name."]
 
 while True:
     for i in range(len(api_options)):
@@ -37,15 +37,9 @@ while True:
         anime_name = input("Enter Anime name:")
         get_data(f"{url}/random/anime?title={anime_name}")
     elif user_choice == 3:
-        character_name = input("Enter Character name:")
-        get_data(f"{url}/random/anime?title={character_name}")
-    elif user_choice == 4:
         get_data(f"{url}/quotes")
-    elif user_choice == 5:
+    elif user_choice == 4:
         anime_name = input("Enter Anime name:")
         get_data(f"{url}/quotes/anime?title={anime_name}")
-    elif user_choice == 6:
-        character_name = input("Enter Character name:")
-        get_data(f"{url}/quotes/anime?title={character_name}")
     else:
         print("Invalid Choice!")
